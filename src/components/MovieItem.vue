@@ -1,13 +1,20 @@
 <template>
     <div>
         <div class="movie-col-left">
-            <img :src="movie.Poster">
+          <router-link :to="{name:'movie', params: {id: movie.imdbID}}" >
+              <img :src="movie.Poster">
+           </router-link>
         </div>
         <div class="movie-col-right">
             <div class="movie-title">
-                <h2>{{movie.Title}}</h2>
-                <span class="movie-rating">{{movie.Rated}}</span>
+              <router-link :to="{name:'movie', params: {id: movie.imdbID}}" >
+                  <h2>{{movie.Title}}</h2>
+              </router-link>
+              <span class="movie-rating">{{movie.Rated}}</span>
             </div>
+           <slot>
+
+           </slot>
         </div>
     </div>
 </template>
