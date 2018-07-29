@@ -34,6 +34,9 @@ const router = new VueRouter({
     routes
 });
 
+import Tooltip from './util/tooltip.js';
+Vue.use(Tooltip);
+
 new Vue({
     el: "#app",
     data: {
